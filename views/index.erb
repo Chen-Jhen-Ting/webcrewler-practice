@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>最新排行榜</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="text-4xl font-thin">最新排行榜</h1>
+    <ul>
+    <% @result.each do |book| %>
+      <li class="py-1 px-6">
+        <span class="text-gray-600 font-thin"><%= book[:title] %></span>
+        <span><%= book[:price] %></span>
+      </li>
+    <% end %>
+    </ul>
+  </body>
+</html>
